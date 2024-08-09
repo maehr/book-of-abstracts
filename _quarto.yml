@@ -25,7 +25,7 @@ website:
         url: https://github.com/digihistch24/book-of-abstracts/
     left:
       - text: Abstracts
-        href: book-of-abstracts.md
+        href: index.qmd
       - text: Conference Program
         href: https://conferences.unibas.ch/frontend/index.php?page_id=1882
       - text: Registration
@@ -33,16 +33,16 @@ website:
       - text: Call for Contributions
         href: https://conferences.unibas.ch/frontend/index.php?folder_id=234&page_id=
       - text: About
-        href: index.qmd
+        href: about.qmd
 
   sidebar:
     contents:
       - section: Abstracts
-        href: book-of-abstracts.md
+        href: index.qmd
         contents:
           - auto: submissions/*/index.qmd
       - section: About
-        href: index.qmd
+        href: about.qmd
         contents:
           - text: Changelog
             href: CHANGELOG.md
