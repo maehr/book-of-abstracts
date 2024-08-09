@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: book-of-abstracts
+  title: DigiHistCH24 Book of Abstracts
   favicon: android-chrome-512x512.png
   open-graph: true
   twitter-card: true
@@ -40,8 +40,7 @@ website:
       - section: Abstracts
         href: book-of-abstracts.md
         contents:
-          - text: Submission Template
-            href: submission/index.qmd
+          - auto: submissions/*/index.qmd
       - section: About
         href: index.qmd
         contents:
