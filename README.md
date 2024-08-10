@@ -14,12 +14,12 @@ This repository contains the Book of Abstracts for the Digital History Switzerla
 
 The structure of this repository follows the [Advanced Structure for Data Analysis](https://the-turing-way.netlify.app/project-design/project-repo/project-repo-advanced.html) of _The Turing Way_ and is organized as follows:
 
-- `submissions/`: Contains the submissions for the conference.
-- `book-of-abstracts.md`: The introduction to the book of abstracts.
+- `submissions/` Contains the submissions for the conference.
+- `book-of-abstracts.md` The introduction to the book of abstracts.
 
 ## Use
 
-These data are openly available to everyone and can be used for any research or educational purpose. If you use this data in your research, please cite as specified in [CITATION.cff](CITATION.cff). The following citation formats are also available through _Zenodo_:
+This data is openly available to everyone and can be used for any research or educational purpose. If you use this data in your research, please cite as specified in [CITATION.cff](CITATION.cff). The following citation formats are also available through _Zenodo_:
 
 - [BibTeX](https://zenodo.org/record/ZENODO_RECORD/export/hx)
 - [CSL](https://zenodo.org/record/ZENODO_RECORD/export/csl)
