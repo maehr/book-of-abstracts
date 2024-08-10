@@ -3,7 +3,7 @@ project:
 
 website:
   title: DigiHistCH24 Book of Abstracts
-  favicon: android-chrome-512x512.png
+  favicon: logo.png
   open-graph: true
   twitter-card: true
   site-url: https://digihistch24.github.io/book-of-abstracts/
@@ -17,9 +17,9 @@ website:
     show-item-context: true
     type: overlay
   navbar:
-    logo: android-chrome-512x512.png
+    background: '#a5d7d2'
     logo-alt: ''
-    title: Book of Abstracts
+    title: '***DigiHistCH24*** Book of Abstracts'
     tools:
       - icon: github
         url: https://github.com/digihistch24/book-of-abstracts/
@@ -36,6 +36,7 @@ website:
         href: about.qmd
 
   sidebar:
+    style: 'docked'
     contents:
       - section: Abstracts
         href: index.qmd
