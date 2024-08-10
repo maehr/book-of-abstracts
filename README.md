@@ -1,6 +1,6 @@
 # Digital History Switzerland 2024 Book of Abstracts
 
-This repository contains This repository contains Book of Abstracts for the Digital History Switzerland 2024. Historical Research, Digital Literacy and Algorithmic Criticism. The data in this repository is openly available to everyone and is intended to support reproducible research.
+This repository contains the Book of Abstracts for the Digital History Switzerland 2024. Historical Research, Digital Literacy and Algorithmic Criticism. The data in this repository is openly available to everyone and is intended to support reproducible research.
 
 [![GitHub issues](https://img.shields.io/github/issues/digihistch24/book-of-abstracts.svg)](https://github.com/digihistch24/book-of-abstracts/issues)
 [![GitHub forks](https://img.shields.io/github/forks/digihistch24/book-of-abstracts.svg)](https://github.com/digihistch24/book-of-abstracts/network)
