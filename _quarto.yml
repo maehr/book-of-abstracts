@@ -60,11 +60,17 @@ website:
 
 format:
   html:
+    link-external-icon: true
+    link-external-newwindow: true
     toc: true
     theme: cosmo
     code-copy: true
     code-overflow: wrap
     css: styles.css
+    include-in-header:
+      - custom-header.html
+    license: CC BY-SA 4.0
+    page-layout: full
 
 freeze: false
 
