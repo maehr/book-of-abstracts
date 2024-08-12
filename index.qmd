@@ -4,6 +4,7 @@ listing:
   type: table
   contents:
     - submissions/*/index.qmd
+date-modified: last-modified
 ---
 
 <!-- TODO -->
