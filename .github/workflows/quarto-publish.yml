@@ -79,11 +79,6 @@ jobs:
 
       # See more at https://github.com/quarto-dev/quarto-actions/blob/main/examples/example-03-dependencies.md
 
-      - uses: browser-actions/setup-chrome@v1
-        with:
-          chrome-version: 128
-          install-chromedriver: true
-
       - name: Render Quarto Project
         uses: quarto-dev/quarto-actions/render@v2
         with:
