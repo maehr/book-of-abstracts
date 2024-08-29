@@ -80,7 +80,7 @@ jobs:
       # See more at https://github.com/quarto-dev/quarto-actions/blob/main/examples/example-03-dependencies.md
 
       - name: Render Quarto Project
-        uses: quarto-dev/quarto-actions/render@v2
+        uses: quarto-dev/quarto-actions/render@v2.1.4
         with:
           path: .
           to: html
