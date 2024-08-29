@@ -80,7 +80,7 @@ jobs:
       # See more at https://github.com/quarto-dev/quarto-actions/blob/main/examples/example-03-dependencies.md
 
       - name: Remove chromium
-        run: sudo apt-get remove chromium-browser
+        run: sudo apt-get remove --purge chromium-browser -y && sudo apt-get remove --purge google-chrome-stable -y
 
       - name: Install chromium
         uses: browser-actions/setup-chrome@v1
