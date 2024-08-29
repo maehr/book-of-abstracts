@@ -79,8 +79,11 @@ jobs:
 
       # See more at https://github.com/quarto-dev/quarto-actions/blob/main/examples/example-03-dependencies.md
 
-      - name: Upgrade chromium
-        run: sudo apt-get install --only-upgrade chromium-browser
+      - name: Remove chromium
+        run: sudo apt-get remove chromium-browser
+
+      - name: Install chromium
+        uses: browser-actions/setup-chrome@v1
 
       - name: Render Quarto Project
         uses: quarto-dev/quarto-actions/render@v2
