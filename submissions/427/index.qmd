@@ -142,8 +142,3 @@ It is obvious that each change to the schema not only affects the XML files to b
 ## A brief outlook
 
 Although our journey of refactoring has just begun, we are already seeing the benefits of the principles we have applied. If the ground your are standing on is a solid one, you can build on it. Currently, we are working on a multilingual translation of our schema from German as the main language to English, French and Italian and hope to enrich the schema with extensive examples from actual XML files. Furthermore, we are rewriting the existing rendering-mechanisms (e.g. TEI to HTML), applying the same rules as described above. All in all, the work done and the cost we had to pay for is already paying off.
-
-## References
-
-::: {#refs}
-:::

@@ -39,7 +39,7 @@ curl -i https://zenodo.org/api/records/ZENODO_RECORD
 
 ## Support
 
-This project is maintained by [@digihistch24](https://github.com/digihistch24). Please understand that we can't provide individual support via email. We also believe that help is much more valuable when it's shared publicly, so more people can benefit from it.
+This project is maintained by [\@digihistch24](https://github.com/digihistch24). Please understand that we can't provide individual support via email. We also believe that help is much more valuable when it's shared publicly, so more people can benefit from it.
 
 | Type                                   | Platforms                                                                           |
 | -------------------------------------- | ----------------------------------------------------------------------------------- |

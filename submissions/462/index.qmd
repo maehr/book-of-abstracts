@@ -58,7 +58,7 @@ To facilitate the automated extraction of information, our team manually annotat
 
 Entities are classified into the categories PER (person), LOC (location), ORG (organization) or GPE (geo-political entity) and consist of an outer span and the head-element which marks the core. Entities are annotated in a nested manner, meaning another entity may be marked inside an entity. Entities may also contain Attributes and Descriptors, further describing them. The annotation of quantitative values, such as dates and money, is also part of the entity annotation process.
 
-![Example annotation of a strongly simplified house description.](./images/annotation_example.png){#fig-anno}
+![Example annotation of a strongly simplified house description.](./images/annotation_example.png){#fig-462-anno}
 
 ### Event Annotation
 
@@ -85,8 +85,8 @@ The obvious indicator to see what amount of interest a property is burdened with
 The lists of interest payments are problematic to use as they take the perspective of the beneficiary of the interest and do not mention if that property is also burdened with interest by other institutions or persons. The documents tracking lending of annuities would work, but their recognition by our automated system is still lacking. The descriptions of properties are thus a good choice, they are well detected by our automated annotation and contain information about all beneficiaries. 
 
 ```{python}
-#| label: fig-3
-#| fig-cap: "Comparison between frequency of descriptions of interest as part of house descriptions and other contexts, such as institutional records recording received interest. Note that even though received interests remain steady, interest descriptions in house descriptions vanish with time. Results are bucketed by decade."
+#| label: fig-462-3
+#| fig-462-cap: "Comparison between frequency of descriptions of interest as part of house descriptions and other contexts, such as institutional records recording received interest. Note that even though received interests remain steady, interest descriptions in house descriptions vanish with time. Results are bucketed by decade."
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -116,11 +116,11 @@ plt.show()
 
 ```
 
-We consider three ways to measure the burden of interest. First, we could use the absolute number of descriptions, but this number is unreliable, as there is a trend to not describe the interest anymore in later documents (see @fig-3). Second, we could try to use the monetary values mentioned in the descriptions. Here we encounter multiple problems: Numbers suffer from more HTR errors than other parts of the documents and are thus less reliable in general. Additionally a number of different currencies are in use, which would need conversion to a single value, as well as payments in kind. Finally our automated system cannot differentiate between different reasons for interest at the moment, so we wouldn’t know if a value is paid per year or only in case of an exchange of property ownership (“zu erschatz”). We settled using the number of beneficiaries to determine the burden of rent. Any entity found in a house description is classified as a beneficiary (we evaluated this to be true in 98% of cases based on 100 samples, with the true false positives being caused by errors in the named entity recognition process). Figure [-@fig-4] shows the absolute numbers of organizations and persons recognized as receivers of interest in house descriptions over time.
+We consider three ways to measure the burden of interest. First, we could use the absolute number of descriptions, but this number is unreliable, as there is a trend to not describe the interest anymore in later documents (see @fig-462-3). Second, we could try to use the monetary values mentioned in the descriptions. Here we encounter multiple problems: Numbers suffer from more HTR errors than other parts of the documents and are thus less reliable in general. Additionally a number of different currencies are in use, which would need conversion to a single value, as well as payments in kind. Finally our automated system cannot differentiate between different reasons for interest at the moment, so we wouldn’t know if a value is paid per year or only in case of an exchange of property ownership (“zu erschatz”). We settled using the number of beneficiaries to determine the burden of rent. Any entity found in a house description is classified as a beneficiary (we evaluated this to be true in 98% of cases based on 100 samples, with the true false positives being caused by errors in the named entity recognition process). Figure [-@fig-462-4] shows the absolute numbers of organizations and persons recognized as receivers of interest in house descriptions over time.
 
 ```{python}
-#| label: fig-4
-#| fig-cap: "Entities mentioned in descriptions of interests within house descriptions by class (5-year gliding window)."
+#| label: fig-462-4
+#| fig-462-cap: "Entities mentioned in descriptions of interests within house descriptions by class (5-year gliding window)."
 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -161,8 +161,8 @@ plt.show()  # Display the plot
 Since the 1420ies, seizure procedures obtained their own series in the city court records. These procedures could be applied in case of arrears in real-estate-related annuities or other interests, allowing the claimant to take the house into his possession after confirming his claim on three occasions. It meant no automatism of confiscation, but rather a gradually increased pressure on house owners to pay their due – actual transfer of ownership was much rarer than the high number of seizure procedures would suggest. Our model is very reliable when it comes to extracting seizure events. In a sample of 100 automatically identified seizures, none of them were false positives. We did not conduct a large enough evaluation to calculate how many seizures we miss currently, but from smaller checks, we’re confident this number is very low.
 
 ```{python}
-#| label: fig-5
-#| fig-cap: "Proportion of entities mentioned per interest description, comparison between houses in seizure procedures and all houses."
+#| label: fig-462-5
+#| fig-462-cap: "Proportion of entities mentioned per interest description, comparison between houses in seizure procedures and all houses."
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -194,15 +194,15 @@ plt.show()
 ```
 
 
-Since seizure procedures were linked to interests, one could expect that interest descriptions would be more frequent in the years before the event. In fact, when comparing the 10 years before a seizure with all documents of the same decade, the relative number of entities mentioned in interest descriptions shows no difference. Thus, owing interests in itself was no reason for increased numbers of seizures. When looking at the number of entities mentioned in each interest description, one sees that in certain periods of time, this proportion was much higher for documents leading to seizure events than in the average document (see @fig-5). This is the case mainly for the time period between 1480 and 1540.
+Since seizure procedures were linked to interests, one could expect that interest descriptions would be more frequent in the years before the event. In fact, when comparing the 10 years before a seizure with all documents of the same decade, the relative number of entities mentioned in interest descriptions shows no difference. Thus, owing interests in itself was no reason for increased numbers of seizures. When looking at the number of entities mentioned in each interest description, one sees that in certain periods of time, this proportion was much higher for documents leading to seizure events than in the average document (see @fig-462-5). This is the case mainly for the time period between 1480 and 1540.
 
 In the next part, we contrast the entities in the interest descriptions to the entities taking part in seizures as claimants.
 To distinguish organizations from persons as parties in seizure procedures, we must look closer at the claimants. Court records generally mention the representative who actually appeared in court. As actor in the event, this person is identified as claimant by our event recognition model. Thanks to our nested entity recognition, we can identify if there is an organizational affiliation with an accuracy of 83.4%. Most of the errors are based on the non-recognition of formulas like “innamen von” (representing) that should be possible to include in future algorithms.
-@fig-7 shows that surprisingly and in contrast to the interest descriptions presented above, persons were much more present as claimants than organizations, even if we account for a considerable proportion of unrecognized organizational affiliations. Thus, either there were people acting as claimants for institutions that are not recognisable in the text as such, or organizations made in fact fewer use of the seizure procedure. One possible explanation could be that seigneurial interests were generally very low, but accounted for a lot of organizations mentioned in interest descriptions. These low interests might not have presented a problem for house owners – or their non-payment did not justify going to court for the institutions. In order to clarify such questions, further research would be necessary.
+@fig-462-7 shows that surprisingly and in contrast to the interest descriptions presented above, persons were much more present as claimants than organizations, even if we account for a considerable proportion of unrecognized organizational affiliations. Thus, either there were people acting as claimants for institutions that are not recognisable in the text as such, or organizations made in fact fewer use of the seizure procedure. One possible explanation could be that seigneurial interests were generally very low, but accounted for a lot of organizations mentioned in interest descriptions. These low interests might not have presented a problem for house owners – or their non-payment did not justify going to court for the institutions. In order to clarify such questions, further research would be necessary.
 
 ```{python}
-#| label: fig-7
-#| fig-cap: "Entity types of claimants."
+#| label: fig-462-7
+#| fig-462-cap: "Entity types of claimants."
 import pandas as pd
 import matplotlib.pyplot as plt
 

@@ -1,0 +1,102 @@
+project:
+  type: book
+
+book:
+  title: 'Book of Abstracts'
+  subtitle: 'Digital History Switzerland 2024'
+  date: '2025'
+  chapters:
+    - index.qmd
+    - keynote/index.qmd
+    - 405/index.qmd
+    - 427/index.qmd
+    - 428/index.qmd
+    - 429/index.qmd
+    - 431/index.qmd
+    - 438/index.qmd
+    - 443/index.qmd
+    - 444/index.qmd
+    - 445/index.qmd
+    - 447/index.qmd
+    - 450/index.qmd
+    - 452/index.qmd
+    - 453/index.qmd
+    - 454/index.qmd
+    - 455/index.qmd
+    # - 456/index.qmd
+    - 457/index.qmd
+    - 458/index.qmd
+    - 459/index.qmd
+    # - 460/index.qmd
+    # - 462/index.qmd
+    - 464/index.qmd
+    - 465/index.qmd
+    # - 468/index.qmd
+    - 469/index.qmd
+    - 473/index.qmd
+    - 474/index.qmd
+    - 480/index.qmd
+    - 482/index.qmd
+    - 486/index.qmd
+    - 687/index.qmd
+    - poster/440/index.qmd
+    - poster/463/index.qmd
+    - poster/466/index.qmd
+    - poster/472/index.qmd
+    - poster/476/index.qmd
+    - poster/484/index.qmd
+
+bibliography:
+  - 405/references.bib
+  - 405/references.bib
+  - 427/references.bib
+  - 428/references.bib
+  - 429/references.bib
+  - 431/references.bib
+  - 438/references.bib
+  - 443/references.bib
+  - 444/references.bib
+  - 445/references.bib
+  - 447/references.bib
+  - 450/references.bib
+  - 453/references.bib
+  - 454/references.bib
+  - 456/references.bib
+  - 457/references.bib
+  - 458/references.bib
+  - 460/references.bib
+  - 462/references.bib
+  - 464/references.bib
+  - 465/references.bib
+  - 469/references.bib
+  - 473/references.bib
+  - 474/baselbib.bib
+  - 480/references.bib
+  - 482/references.bib
+  - 486/references.bib
+  - 687/references.bib
+  - poster/440/references.bib
+  - poster/463/references.bib
+  - poster/476/references.bib
+
+format:
+  # html:
+  #   theme: cosmo
+  pdf:
+    documentclass: scrbook
+    mainfont: Jost
+    sansfont: Jost
+    papersize: a4
+    geometry:
+      - inner=3cm
+      - outer=2.5cm
+      - top=2.5cm
+      - bottom=2.5cm
+    toc: true
+    toc-depth: 2
+    number-sections: true
+    pdf-engine: tectonic
+
+freeze: auto
+
+editor: visual

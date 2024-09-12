@@ -83,11 +83,7 @@ Geovistory aims to be a comprehensive research environment that accompanies scho
 - The Geovistory *Publication platform* (<http://geovistory.org>), where data is published using the RDF framework and can be accessed via the community page or project-specific webpages and its graphical search tools or a SPARQL-endpoint.
 - An active *Community* to foster information and know-how exchange among the researchers, users and technological experts.
 
-::: {#fig-geovistory-components}
-
-![](images/Geovistory_components.png)
-
-:::
+![](images/Geovistory_components.png){#fig-geovistory-components}
 
 As per current terms of service, all data produced in the information layer of Geovistory are licensed under creative commons BY-SA 4.0. Initiated by KleioLab GmbH, the different infrastructure components are currently being developed jointly by LARHRA and the University of Bern, while other actors are welcome to join the Geovistory vision.. All the web components and the publication platform have been made available as open source, as well as the toolbox. The LOD4HSS project (<https://www.geovistory.org/lod4hss>), co-funded by swissuniversities, structures these efforts and aims at creating a larger community of users and supporters of this vision.
 

@@ -8,7 +8,7 @@ author:
     email: edu.ildf@icloud.com
     affiliations:
       - University of Geneva
-bibliography: Master_thesis_ILDF.bib
+bibliography: references.bib
 keywords:
   - Digital History 
   - Structural Topic Modelling
