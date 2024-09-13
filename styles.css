@@ -103,7 +103,8 @@
 	}
 	/* Hide navigation, search, and footer elements */
 	#quarto-header nav.navbar,
-	#quarto-code-tools-source {
+	#quarto-code-tools-source,
+	#quarto-back-to-top {
 		display: none;
 	}
 
