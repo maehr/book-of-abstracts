@@ -18,19 +18,14 @@ author:
     email: wissam.al-kendi@utbm.fr
     affiliations:
       - UTBM
-
 keywords:
   - Demographic history
   - Industrialization
   - Handwritten Text Recognition
-
-abstract: 
-  "The Belpop project aims to reconstruct the demographic behavior of the population of a mushrooming working-class town during industrialization: Belfort. Belfort is a hapax in the French urban landscape of the 19^th^ century, as the demographic growth of its main working- class district far outstripped that of the most dynamic Parisian suburbs. The underlying hypothesis is that the massive Alsatian migration that followed the 1870-71 conflict, and the concomitant industrialization and militarization of the city, profoundly altered the demographic behavior of the people of Belfort.
-
+abstract: |
+  The Belpop project aims to reconstruct the demographic behavior of the population of a mushrooming working-class town during industrialization: Belfort. Belfort is a hapax in the French urban landscape of the 19^th^ century, as the demographic growth of its main working- class district far outstripped that of the most dynamic Parisian suburbs. The underlying hypothesis is that the massive Alsatian migration that followed the 1870-71 conflict, and the concomitant industrialization and militarization of the city, profoundly altered the demographic behavior of the people of Belfort.
   This makes Belfort an ideal place to study the sexualization of social relations in 19^th^-century Europe. These relationships will first be understood through the study of out-of-wedlock births, in their socio-cultural and bio-demographic dimensions. In the long term, this project will also enable to answer many other questions related to event history analysis, a method that is currently undergoing major development, thanks to artificial intelligence (AI), and which is profoundly modifying the questions raised by historical demography and social history.
-
   The contributions of deep learning make it possible to plan a complete analysis of Belfort's birth (ECN) and death (ECD) civil registers (1807-1919), thanks to HTR methods applied to these sources (two interdisciplinary computer science-history theses in progress). This project is part of the SOSI CNRS ObHisPop (Observatoire de l'Histoire de la Population française: grandes bases de données et IA), which federates seven laboratories and aims to share the advances of interdisciplinary research in terms of automating the constitution of databases in historical demography. Challenges also include linking (matching individual data) the ECN and ECD databases, and eventually the DMC database (DMC is the city's main employer of women)."
-
 date: 07-22-2024
 ---
 
@@ -56,8 +51,3 @@ A structured data tool has been developed for correlating the extracted text lin
 Belfort Civil Registers of Death (ECD) are composed of 39,238 death declarations with 18,381 fully handwritten certificates and 20,857 hybrid certificates. This corpus spans from 1807 to 1919. ECDs have the same resolution (300 dpi) and the same structure as the Civil Registers of Birth (ECN). The information given by each declaration is somewhat different: the name, the age, the profession of the deceased, the place of death, and even the profession of the witness, can be found.
 Concerning ECDs, a different strategy was chosen for the text segmentation and the data extraction: the Document Attention Network (DAN). This network recently published is used to get rid of the pre-segmentation step which is highly beneficial for the heterogeneity of our dataset. It was developed for the recognition of handwritten dataset such as READ 2016 and RIMES 2009. Moreover, this architecture can focus on relevant parts of the document, improving the precision and identifying and extracting specific segments of interests. The choice was also made because this network is very efficient in handling large volumes of data while maintaining data integrity.
 The DAN architecture is made of a Fully Convolutional Network (FCN) encoder to extract feature maps of the input image. This type of network is the most popular approach for pixel-pixel document layout analysis because it maintains spatial hierarchies. Then, a transformer is used as a decoder to predict sequences of variable length. Indeed, the output of this network is a sequence of tokens describing characters of the French language or layout (beginning of paragraph or end of page for instance). These layout tokens or tags were made to structure the layout of a register double page and to unify the ECD and ECN datasets. The ECD training dataset was built by picking around four certificates each year of the full dataset. For the handwritten records (1807-1885) the first two declarations of the double page were annotated and the first four for the hybrid records (1886-1919). This led to annotating 460 declarations for the first period and 558 declarations for the second one to give a total of 1118 annotated death certificates. We are currently verifying these annotations to start the pre-training phase of the DAN in the coming months.
-
-## References
-
-::: {#refs}
-:::
