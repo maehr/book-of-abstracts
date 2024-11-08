@@ -13,9 +13,9 @@ This conference provides a platform for scholars, researchers and professionals 
 
 ## Digital History Network Switzerland
 
-While you're here, you might also want to check out the Digital History Network Switzerland! Its aim is to promote the visibility of digital history and to network people from academic and memory institutions as well as other actors in this field. We recommend joining the network's mailing list! See <a href="https://www.infoclio.ch/en/digitalhistorynetwork" target="_blank" rel="noopener">infoclio.ch</a> for more information.
+While you're here, you might also want to check out the Digital History Network Switzerland! Its aim is to promote the visibility of digital history and to network people from academic and memory institutions as well as other actors in this field. We recommend joining the network's mailing list! See [infoclio.ch](https://www.infoclio.ch/en/digitalhistorynetwork){target="_blank" rel="noopener"} for more information.
 
-<a href="https://www.infoclio.ch/en/digitalhistorynetwork" target="_blank" rel="noopener"><img src="/images/logo_digital_history_network_ch.svg" alt="Digital History Network Switzerland Logo" width="600"/></a>
+[![Digital History Network Switzerland Logo](/images/logo_digital_history_network_ch.svg){width="600"}](https://www.infoclio.ch/en/digitalhistorynetwork){target="_blank" rel="noopener"}
 
 ## Organising Committee
 
